@@ -73,7 +73,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Deploy BICEP template
-        uses: azure/arm-deploy@v1id: deploywebappd
+        uses: azure/arm-deploy@v1
+        id: deploywebappd
         with:
           deploymentName: create-webapp
           subscriptionId: ${{ env.AZURE_SUBSCRIPTION }}
